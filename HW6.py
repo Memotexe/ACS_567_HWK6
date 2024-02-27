@@ -15,12 +15,12 @@ match choice:
             PreviousSprintsPoints = int(input("Please enter the Scrum Team's Total Points from Previous Scrums, "
                                               "When you are done please enter 0 to quit"))
             if PreviousSprintsPoints == 0:
-                print("Calculate Sprint Velocity Average")
                 LC = False
+                SVAverage = TotalPoints/totalNumOfSprint
+                print("Your Scrum Team's Average Velocity is: " + str(SVAverage))
             else:
                 TotalPoints = TotalPoints + PreviousSprintsPoints
                 totalNumOfSprint = totalNumOfSprint + 1
-
 
     case 2:
         print("Calculate Scrum Team's Effort-Hour Capacity")
