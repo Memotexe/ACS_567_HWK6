@@ -3,6 +3,8 @@ PreviousSprintsPoints = 0
 TotalPoints = 0
 totalNumOfSprint = 0
 PList = []
+TotalEHL = 0
+TotalEHH = 0
 print("Welcome to the SCRUM DATA ANALYSIS SYSTEM or SDAS for short.")
 print("Please decide what you wish to do!")
 choice = int(input("Options:\n"
@@ -45,6 +47,12 @@ match choice:
                         AEHH = (item[1] - item[2]) * item[4]
                         item.append(AEHL)
                         item.append(AEHH)
+
+                    for item in PList:
+                        TotalEHL = TotalEHL + item[5]
+                        TotalEHH = TotalEHH + item[6]
+
+
     case default:
         print("The proper choice wasn't entered, now exiting")
         exit()
