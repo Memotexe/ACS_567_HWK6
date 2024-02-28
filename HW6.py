@@ -40,7 +40,11 @@ match choice:
                     continue
                 case 'N':
                     LC = False
-
+                    for item in PList:
+                        AEHL = (item[1] - item[2]) * item[3]
+                        AEHH = (item[1] - item[2]) * item[4]
+                        item.append(AEHL)
+                        item.append(AEHH)
     case default:
         print("The proper choice wasn't entered, now exiting")
         exit()
