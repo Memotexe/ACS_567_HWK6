@@ -17,7 +17,7 @@ match choice:
             if PreviousSprintsPoints == 0:
                 LC = False
                 SVAverage = TotalPoints/totalNumOfSprint
-                print("Your Scrum Team's Average Velocity is: " + str(SVAverage))
+                
             else:
                 TotalPoints = TotalPoints + PreviousSprintsPoints
                 totalNumOfSprint = totalNumOfSprint + 1
