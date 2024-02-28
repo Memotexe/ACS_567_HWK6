@@ -2,6 +2,7 @@ LC = True
 PreviousSprintsPoints = 0
 TotalPoints = 0
 totalNumOfSprint = 0
+PList = []
 print("Welcome to the SCRUM DATA ANALYSIS SYSTEM or SDAS for short.")
 print("Please decide what you wish to do!")
 choice = int(input("Options:\n"
@@ -24,6 +25,22 @@ match choice:
 
     case 2:
         print("Calculate Scrum Team's Effort-Hour Capacity")
+        while LC:
+            PName = input("Please enter the Scrum Members Name\n")
+            PDaysAvailable = int(input("Please enter the Scrum Members Days Available\n"))
+            PDaysBusy = int(input("Please enter the Scrum Members Days Busy with Scrum Activities\n"))
+            PHoursPerDayL = int(input("Please enter the Scrum Members Lowest Hours Per Day\n"))
+            PHoursPerDayH = int(input("Please enter the Scrum Members Highest Hours Per Day\n"))
+            Person = [PName, PDaysAvailable, PDaysBusy, PHoursPerDayL, PHoursPerDayH]
+            PList.append(Person)
+            print(PList)
+            TC = input("Do you wanna to add another team member? 'Y' if Yes, 'N' if No\n")
+            match TC:
+                case 'Y':
+                    continue
+                case 'N':
+                    LC = False
+
     case default:
         print("The proper choice wasn't entered, now exiting")
         exit()
