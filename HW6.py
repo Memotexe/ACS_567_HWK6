@@ -61,6 +61,7 @@ match choice:
 
                     print("Teams Total Effort Hours Range: " + str(TotalEHL) + "-" + str(TotalEHH))
 
+
     case default:
         print("The proper choice wasn't entered, now exiting")
         exit()
