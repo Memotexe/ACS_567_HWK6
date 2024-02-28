@@ -52,6 +52,15 @@ match choice:
                         TotalEHL = TotalEHL + item[5]
                         TotalEHH = TotalEHH + item[6]
 
+                    for item in PList:
+                        print("Name: " + item[0] + "\n"
+                              + "Days Available: " + str(item[1]) + "\n"
+                              + "Days Busy with Scrum Activities: " + str(item[2]) + "\n"
+                              + "Lowest Hours Per Day: " + str(item[3]) + "\n"
+                              + "Highest Hours Per Day: " + str(item[4]) + "\n")
+
+                    print("Teams Total Effort Hours Range: " + str(TotalEHL) + "-" + str(TotalEHH))
+
 
     case default:
         print("The proper choice wasn't entered, now exiting")
