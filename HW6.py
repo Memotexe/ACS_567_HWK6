@@ -63,7 +63,10 @@ choice = int(input("Options:\n"
 print(choice)
 match choice:
     case 1:
-        UI = int(input("Please enter the total sprint points for your team over the past 6 weeks :)\n"))
+        UI = input("Please enter the total sprint points for your team over the past 6 weeks :)\n")
+        UI = int(UI)
+        if type(UI) is not int:
+            raise TypeError("User Input must be an integer!")
         theCSTVAverage = CSTV(UI)
         print(theCSTVAverage)
     case 2:
